@@ -5,7 +5,7 @@ export const fetch = async () =>  {
     return rows;
 };
 //insert
- export const insert = async (student) => {
+ export const create = async (student) => {
    const [result] = await pool.query(
       "INSERT INTO student (name, age) VALUES (?, ?)",
       [student.name, student.age]

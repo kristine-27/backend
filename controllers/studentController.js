@@ -4,7 +4,7 @@ export const fetchAllStudent = async (req, res) =>{
     const student= await studentService.fetchAllStudent();
     res.status(200).json(student);
 };
-export const insertStudent = async (req, res) => {
+export const createStudent = async (req, res) => {
     console.log(req);
     const { name, age } = req.body;
     const student = { name, age };
@@ -23,7 +23,7 @@ export const insertStudent = async (req, res) => {
     }
     }
 
- export const editStudent = async (req, res) => {
+ export const updateStudent = async (req, res) => {
     const {name, age} = req.body;
     const {id} = req.params;
     const student = { name, age, id };
