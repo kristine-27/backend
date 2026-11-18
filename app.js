@@ -1,6 +1,7 @@
 import express from "express";
 import bookRoutes from "./routes/bookRoute.js";
 import studentRoutes from "./routes/studentRoute.js";
+import userRoutes from "./routes/userRoute.js";     
 
 const app = express();
 
@@ -9,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/book', bookRoutes);
 app.use('/student', studentRoutes);
+app.use('/user', userRoutes);
 
 try {
     const port = process.env.PORT || 3000;
@@ -16,6 +18,6 @@ try {
     app.listen(port, () => {
         console.log(`listening to port ${port}...`);
     });
-} catch(e) {
+} catch(e) {    
     console.log(e);
 }
