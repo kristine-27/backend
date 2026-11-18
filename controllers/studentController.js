@@ -10,7 +10,7 @@ export const createStudent = async (req, res) => {
     const student = { name, age };
 
     try{
-        const studentID = await studentService.insertStudent(student);
+        const studentID = await studentService.createStudent(student);
         res.status(200).json({
             success: true,
             message: studentID

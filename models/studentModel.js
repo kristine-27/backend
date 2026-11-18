@@ -1,7 +1,7 @@
 import pool from '../config/db.js';
 
 export const fetch = async () =>  {
-    const [rows] = await pool.querey("SELECT * FROM student");
+    const [rows] = await pool.query("SELECT * FROM student");
     return rows;
 };
 //insert
